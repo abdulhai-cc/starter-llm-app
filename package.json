@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "clean": "hardhat clean",
-    "compile": "hardhat compile",
-    "test": "hardhat test",
+    "clean": "hardhat clean --config ./blockchain/hardhat.config.cjs",
+    "compile": "hardhat compile --config ./blockchain/hardhat.config.cjs",
+    "test": "hardhat test --config ./blockchain/hardhat.config.cjs",
 
-    "deploy": "hardhat run --network baseSepolia scripts/deploy-all.mjs",
-    "deploy:local": "hardhat run scripts/deploy-all.mjs",
-    "verify": "hardhat verify --network baseSepolia",
+    "deploy": "hardhat run --config ./blockchain/hardhat.config.cjs --network baseSepolia scripts/deploy-all.mjs",
+    "deploy:local": "hardhat run --config ./blockchain/hardhat.config.cjs scripts/deploy-all.mjs",
+    "verify": "hardhat verify --config ./blockchain/hardhat.config.cjs --network baseSepolia",
 
     "dev": "vite",
     "build": "vite build",
